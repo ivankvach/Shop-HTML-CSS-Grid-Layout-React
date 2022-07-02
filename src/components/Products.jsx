@@ -1,5 +1,6 @@
 import React, { useState }from 'react';
 import products from '../data';
+import { Link } from 'react-router-dom';
 
 const Products = () => {
 
@@ -13,7 +14,7 @@ const Products = () => {
         {items.map((item) => 
         <div className="product_list_sigle">
           <div className="product_list_sigle_image">
-            <a href="single-product"><img src={require('../images/' + item.photo + '.png')} alt="1" /></a>
+            <Link to={`single-product/${item.id}`}><img src={require('../images/' + item.photo + '.png')} alt="1" /></Link>
           </div>
           <div className="product_list_sigle_descriptions">
           <a href="single-product"><h2>{item.title}.</h2></a>

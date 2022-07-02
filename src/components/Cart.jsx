@@ -1,15 +1,20 @@
 import React from 'react'
+import { useState, useEffect } from 'react'
 
 const Cart = () => {
+    console.log(JSON.parse(localStorage.getItem("cart")));
+    const [items, setItems] = useState([JSON.parse(localStorage.getItem("cart"))])
+    
     return (
         <div className="wrapper_cart">
             <h1>Cart</h1>
             <div className="cart_section">
+                {items.map((item) => 
                 <div className="cart_section_single_product_1">
                     <div className="cart_section_single_product_1_options">
-                        <h1>Lorem, ipsum dolor.</h1>
-                        <h2>Lorem ipsum dolor sit.</h2>
-                        <h3>$50.00</h3>
+                        <h1>{item.title}</h1>
+                        <h2>{item.title}</h2>
+                        <h3>${item.price}</h3>
                         <h4>SIZE:</h4>
                         <div className="cart_section_single_product_1_options_size">
                             <div className="cart_section_single_product_1_options_size_xs">xs</div>
@@ -30,10 +35,11 @@ const Cart = () => {
                             <div className="cart_section_single_product_1_options_photo_mount_count">1</div>
                             <div className="cart_section_single_product_1_options_photo_mount_minus"><span className="cart_section_single_product_1_options_photo_mount_minus">-</span></div>
                         </div>
-                        <div className="cart_section_single_product_1_options_photo_photo"><a href="single-product"><img src={require('../images/' + '1' + '.png')} alt="1" /></a></div>
+                        <div className="cart_section_single_product_1_options_photo_photo"><a href="single-product"><img src={require('../images/' + item.photo + '.png')} alt="1" /></a></div>
                     </div>
                 </div>
-                <div className="cart_section_single_product_1">
+                )}
+                {/* <div className="cart_section_single_product_1">
                     <div className="cart_section_single_product_1_options">
                         <h1>Lorem, ipsum dolor.</h1>
                         <h2>Lorem ipsum dolor sit.</h2>
@@ -60,7 +66,7 @@ const Cart = () => {
                         </div>
                         <div className="cart_section_single_product_1_options_photo_photo"><a href="single-product"><img src={require('../images/' + '2' + '.png')} alt="1" /></a></div>
                     </div>
-                </div>
+                </div> */}
                 <div className="cart_section_order_send">
                     <div className="cart_section_order_send_left_section">
                     <h2>Lorem, ipsum dolor.</h2>

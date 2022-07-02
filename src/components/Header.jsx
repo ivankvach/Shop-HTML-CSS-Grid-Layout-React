@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import { Link } from 'react-router-dom';
 import { MiniCart, CurrencyOptions } from '../components';
 
 const Header = () => {
@@ -24,11 +25,11 @@ const Header = () => {
     <>
       <div className="wrapper">
         <div className="box1_header">
-          <a href="/" className="box1_header_women">WOMEN</a>
-          <a href="/" className="box1_header_men">MEN</a>
-          <a href="/" className="box1_header_kids">KIDS</a>
+        <Link to="/" className="box1_header_women">WOMEN</Link>
+        <Link to="/" className="box1_header_men">MEN</Link>
+        <Link to="/" className="box1_header_kids">KIDS</Link>
         </div>
-        <a className="box2_header" href="/"><img src={require('../images/' + 'logo' + '.png')} alt="1" /></a>
+        <Link to="/" className="box2_header"><img src={require('../images/' + 'logo' + '.png')} alt="1" /></Link>
         <div className="box3_header">
           <div className="box3_header_currency" onClick={handleCurrency}>
             <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-currency-dollar" viewBox="0 0 16 16">
