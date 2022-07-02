@@ -4,14 +4,14 @@ const SingleProduct = () => {
     return (
         <div className="wrapper_single_product">
             <div className="single_product_left_section">
-                <div className="single_product_left_section_images">images1</div>
-                <div className="single_product_left_section_images">images2</div>
-                <div className="single_product_left_section_images">images3</div>
+                <div className="single_product_left_section_images"><img src={require('../images/' + '1' + '.png')} alt="1" /></div>
+                <div className="single_product_left_section_images"><img src={require('../images/' + '1' + '.png')} alt="1" /></div>
+                <div className="single_product_left_section_images"><img src={require('../images/' + '1' + '.png')} alt="1" /></div>
             </div>
-            <div className="single_product_center_section">center</div>
+            <div className="single_product_center_section"><img src={require('../images/' + '1' + '.png')} alt="1" /></div>
             <div className="single_product_right_section">
-                <h1>Lorem, ipsum dolor.</h1>
-                <h2>Lorem ipsum dolor sit.</h2>
+                <h2>Lorem, ipsum dolor.</h2>
+                <h2 className="title">Lorem ipsum dolor sit.</h2>
                 <h4>SIZE:</h4>
                 <div className="single_product_right_section_options_size">
                     <div className="single_product_right_section_options_size_xs">xs</div>
@@ -25,8 +25,8 @@ const SingleProduct = () => {
                     <div className="single_product_right_section_options_color_black"></div>
                     <div className="single_product_right_section_options_color_green"></div>
                 </div>
-                <h4 className="prise">PRICE:</h4>
-                <h3>$50.00</h3>
+                <h4>PRICE:</h4>
+                <h3 className="prise">$50.00</h3>
                 <div className="single_product_right_section_options_button">
                     <button>Send to Cart</button>
                 </div>

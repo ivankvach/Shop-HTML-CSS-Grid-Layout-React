@@ -26,11 +26,11 @@ const Cart = () => {
                     </div>
                     <div className="cart_section_single_product_1_options_photo">
                         <div className="cart_section_single_product_1_options_photo_mount">
-                            <div className="cart_section_single_product_1_options_photo_mount_plus">+</div>
+                            <div className="cart_section_single_product_1_options_photo_mount_plus"><span className="cart_section_single_product_1_options_photo_mount_plus">+</span></div>
                             <div className="cart_section_single_product_1_options_photo_mount_count">1</div>
-                            <div className="cart_section_single_product_1_options_photo_mount_minus">-</div>
+                            <div className="cart_section_single_product_1_options_photo_mount_minus"><span className="cart_section_single_product_1_options_photo_mount_minus">-</span></div>
                         </div>
-                        <div className="cart_section_single_product_1_options_photo_photo">photo</div>
+                        <div className="cart_section_single_product_1_options_photo_photo"><a href="single-product"><img src={require('../images/' + '1' + '.png')} alt="1" /></a></div>
                     </div>
                 </div>
                 <div className="cart_section_single_product_1">
@@ -54,11 +54,11 @@ const Cart = () => {
                     </div>
                     <div className="cart_section_single_product_1_options_photo">
                         <div className="cart_section_single_product_1_options_photo_mount">
-                            <div className="cart_section_single_product_1_options_photo_mount_plus">+</div>
+                        <div className="cart_section_single_product_1_options_photo_mount_plus"><span className="cart_section_single_product_1_options_photo_mount_plus">+</span></div>
                             <div className="cart_section_single_product_1_options_photo_mount_count">1</div>
-                            <div className="cart_section_single_product_1_options_photo_mount_minus">-</div>
+                            <div className="cart_section_single_product_1_options_photo_mount_minus"><span className="cart_section_single_product_1_options_photo_mount_minus">-</span></div>
                         </div>
-                        <div className="cart_section_single_product_1_options_photo_photo">photo</div>
+                        <div className="cart_section_single_product_1_options_photo_photo"><a href="single-product"><img src={require('../images/' + '2' + '.png')} alt="1" /></a></div>
                     </div>
                 </div>
                 <div className="cart_section_order_send">
