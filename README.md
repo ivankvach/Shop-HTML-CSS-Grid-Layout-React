@@ -1,7 +1,7 @@
 ![Alt text](./src/images/View_shop.png "Optional title")
 ![Alt text](./src/images/View_shop_single_product.png "Optional title")
 ![Alt text](./src/images/Pop_Up.png "Optional title")
-![Alt text](./src/images/cart.png"Optional title")
+![Alt text](./src/images/cart.png "Optional title")
 
 # Getting Started with Create React App
 
