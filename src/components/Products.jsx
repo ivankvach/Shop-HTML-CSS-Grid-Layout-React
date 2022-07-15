@@ -1,11 +1,17 @@
 import React, { useState }from 'react';
 import products from '../data';
 import { Link } from 'react-router-dom';
+import { useSelector} from 'react-redux';
+import getSymbolFromCurrency from 'currency-symbol-map';
 
 const Products = () => {
 
+  const currencY = useSelector(state => state.currency);
+
+console.log(currencY.slice(0, 3))
+
   const [items, setItems] = useState(products)
-  console.log(items.map((item) => item.title))
+  console.log(items.map((item) => item.price))
 
   return (
     <div className="wrapper_products">
@@ -18,7 +24,7 @@ const Products = () => {
           </div>
           <div className="product_list_sigle_descriptions">
           <a href="single-product"><h2>{item.title}.</h2></a>
-          <a href="single-product"><h2>${item.price}</h2></a>
+          <a href="single-product"><h2>{getSymbolFromCurrency(currencY.slice(0, 3))} {(parseFloat(currencY.slice(3)).toFixed(2) * item.price).toFixed(2)}</h2></a>
           </div>
         </div>
         )}
