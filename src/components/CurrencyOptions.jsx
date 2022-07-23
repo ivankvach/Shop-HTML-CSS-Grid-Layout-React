@@ -1,16 +1,16 @@
 import React from 'react';
 import { useSelector, useDispatch } from 'react-redux';
-import { setCurrencY } from '../actions'
+import { setCurrencY, turnCurrency } from '../actions'
 import getSymbolFromCurrency from 'currency-symbol-map';
 
 const CurrencyOptions = () => {
 
-  const currencY = useSelector(state => state.currency);
   const dispatch = useDispatch();
 
   const setCurrency = (e) => {
     console.log(parseInt(e.target.value))
     dispatch(setCurrencY(e.target.value))
+    dispatch(turnCurrency())
   }
   return (
     <div className="wrapper_currency_options">  

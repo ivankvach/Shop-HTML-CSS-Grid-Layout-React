@@ -38,3 +38,16 @@ export const setCurrencY = (data) => {
         payload: data
     };
 };
+
+export const turnCurrency = (data) => {
+    return {
+        type: 'TURN_CURRENCY',
+        payload: data
+    };
+};
+
+export const turnCart = () => {
+    return {
+        type: 'TURN_CART'
+    };
+};

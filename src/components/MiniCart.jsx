@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { useSelector, useDispatch } from 'react-redux';
-import { setItemS, deleteItemS, setSize, setColor } from '../actions';
+import { setItemS, deleteItemS, setSize, setColor, turnCart } from '../actions';
 import { Link } from 'react-router-dom';
 import getSymbolFromCurrency from 'currency-symbol-map';
 
@@ -99,6 +99,10 @@ const MiniCart = () => {
         dispatch(setColor(itemColor))
     }
 
+    const hideCover = () => {
+        dispatch(turnCart())
+    }
+
     const sendOrder = () => {
         alert(JSON.stringify(itemS))
     }
@@ -138,13 +142,13 @@ const MiniCart = () => {
                         <div className="minicart_section_order_send_left_section">
                             <h2>Total</h2>
                             <div className="minicart_section_order_send_button">
-                                <button className="minicart_section_order_send_button_back" >Back</button>
+                                <button className="minicart_section_order_send_button_back" onClick={() => hideCover()}>Hide</button>
                             </div>
                         </div>
                         <div className="minicart_section_order_send_right_section">
                             <h2>{getSymbolFromCurrency(currencY.slice(0, 3))}{(parseFloat(currencY.slice(3)).toFixed(2) * price).toFixed(2)}</h2>
                             <div className="minicart_section_order_send_button">
-                                <Link to="cart" className="minicart_section_order_send_button_order">Order</Link>
+                                <Link to="cart" className="minicart_section_order_send_button_order"  onClick={() => hideCover()}>Order</Link>
                             </div>
                             <div />
                         </div>
